@@ -1,0 +1,16 @@
+title: my-first-course
+description: TBD
+template:
+  repo: my-first-course-template
+  name: my-first-course
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
